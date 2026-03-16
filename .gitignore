@@ -1,0 +1,7 @@
+.venv
+.webapp
+__pycache__
+*.png
+*.svg
+*.log
+.DS_Store
