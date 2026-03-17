@@ -12,6 +12,7 @@ Self-contained CLI wrapper for exporting `.drawio` files to PNG/SVG using the dr
 
 - Python 3.10+
 - Playwright Chromium runtime
+- Git (optional, required only for `vendorize.py --github`)
 
 ## Setup
 
