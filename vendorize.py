@@ -18,7 +18,7 @@ except Exception:
         ".venv/bin/python -m playwright install chromium"
     )
 
-REPO_DIR = Path(__file__).resolve().parent.parent
+REPO_DIR = Path(__file__).resolve().parent
 TARGET_ROOT = REPO_DIR / ".webapp"
 
 FULL_COPY_LIST = [
