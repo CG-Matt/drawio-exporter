@@ -24,7 +24,7 @@ goto help_error
 
 :args_done
 if not defined MODE (
-  set /p CHOICE=Select setup mode [1=venv (recommended), 2=global]: 
+  set /p CHOICE=Select setup mode [1=venv ^(recommended^), 2=global]: 
   if "%CHOICE%"=="" set "MODE=venv"
   if "%CHOICE%"=="1" set "MODE=venv"
   if "%CHOICE%"=="2" set "MODE=global"
@@ -36,11 +36,11 @@ if /I not "%MODE%"=="venv" if /I not "%MODE%"=="global" (
 )
 
 where py >nul 2>&1
-if %errorlevel%==0 (
+if not errorlevel 1 (
   set "PY=py -3"
 ) else (
   where python >nul 2>&1
-  if %errorlevel%==0 (
+  if not errorlevel 1 (
     set "PY=python"
   ) else (
     echo Python 3 is required. Install Python and ensure py or python is on PATH. 1>&2
